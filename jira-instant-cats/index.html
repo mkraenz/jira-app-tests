@@ -1,0 +1,56 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High Teatime for Jira</title>
+    <link rel="stylesheet" href="https://unpkg.com/@atlaskit/css-reset@2.0.0/dist/bundle.css" media="all">
+    <script src="https://connect-cdn.atl-paas.net/all.js" async></script>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            padding-top: 24px;
+        }
+
+        img {
+            margin-top: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="content" class="ac-content">
+        <h1>Jira Instant Cats to the rescue 🐈 </h1>
+        <form>
+            <label for="width">width</label>
+            <input type="text" value="200" id="width" />
+            <label for="width">height</label>
+            <input type="text" value="300" id="height" />
+            <button id="apply-btn">Apply</button>
+        </form>
+        <img id="kitten" src="http://placekitten.com/200/300" alt="a placeholder kitten" />
+    </section>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const img = document.querySelector('#kitten');
+            const button = document.querySelector('#apply-btn');
+            const widthInput = document.querySelector('#width');
+            const heightInput = document.querySelector('#height');
+
+            button.addEventListener('click', () => {
+                event.preventDefault();
+                const width = widthInput.value;
+                const height = heightInput.value;
+                img.src = `http://placekitten.com/${width}/${height}`;
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "Jira Instant Cats",
+  "description": "Need a break? Open the app for instant cat cuteness.",
+  "key": "com.example.instantcats",
+  "baseUrl": "TODO_SET_URL/jira-instant-cats",
+  "vendor": {
+    "name": "Jira Instant Cats",
+    "url": "http://example.com"
+  },
+  "authentication": {
+    "type": "none"
+  },
+  "apiVersion": 1,
+  "modules": {
+    "generalPages": [
+      {
+        "url": "/index.html",
+        "key": "instant-cats",
+        "location": "system.top.navigation.bar",
+        "name": {
+          "value": "Jira Instant Cats"
+        }
+      }
+    ]
+  }
+}
